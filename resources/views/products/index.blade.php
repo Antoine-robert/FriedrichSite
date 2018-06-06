@@ -150,12 +150,6 @@
             position: relative;
         }
 
-        .top-left {
-            position: absolute;
-            left: 10px;
-            top: 18px;
-        }
-
         .content {
             text-align: center;
             height: 100%;
@@ -168,7 +162,6 @@
             margin: 10px 0 10px 0;}
 
         .title {
-            color: #7f0000;
             font-size: 84px;
             text-shadow: white 1px 0 10px;
         }
@@ -177,7 +170,7 @@
             color: #ffffff;
             padding: 0 25px;
             font-family: 'Prata', serif;
-            font-size: 20px;
+            font-size: 15px;
             font-weight: 600;
             letter-spacing: .1rem;
             text-decoration: none;
@@ -185,7 +178,7 @@
         }
         .links > a:hover {
             color: white;
-            font-size: 25px;
+            font-size: 20px;
             text-decoration: none;
 
         }
@@ -215,6 +208,10 @@
             padding-left: 0px;
             height: 130px;
         }
+        header{
+            background-color: rgba(0,0,0,0.5);
+            color :darkred;
+        }
         .top-right {
             position: absolute;
             right: 10px;
@@ -234,13 +231,13 @@
     }
 </script>
 <header>
-    <div class="title" style="background: rgba(0,0,0,0.5)">
+    <div class="title">
         <a href="{{ url('/') }}" class="navbar-brand"><img src="img/Flogo.gif" ></a>
-        <div style="margin-left:40%;">Produits</div>
+        <div style="margin-left:35%;">Nos Produits</div>
     </div>
     <div class="top-right links">
+        <a href="/contact">Nous Contacter</a>
         <a href="/entreprise">Notre Entreprise</a>
-        <a href="/contact">Nous contacter</a>
     </div>
 </header>
 <body>
@@ -248,20 +245,17 @@
 <div class="flex-center position-ref full-height">
     <div class="content">
         <div class="container">
-            <div id="categories-list" class="row list-group" >
-                <div class="well well-sm"style="margin-bottom: 0; background: black;">
-                    <strong style="font-size: 30px">Filtrer :   </strong>
-                    <button onclick="myFunction()">Click me</button>
-                    <div class="btn-group" style="margin-top: 10px">
-                        <a href="#" id="Tartesucre" class="btn btn-default btn-sm">
+            <div id="categories-list" class="row list-group">
+                <div class="well well-sm"style="margin-bottom: 0; background: black;height: 100px">
+                        <a href="#" id="Tartesucre" class="btn btn-default btn-sm" style="height:50px;width:200px;vertical-align: center">
                             <span class="glyphicon glyphicon-plus">
                                 </span>Tartes sucrées</a>
-                        <a href="#" id="Tartesel" class="btn btn-default btn-sm">
+                        <a href="#" id="Tartesel" class="btn btn-default btn-sm" style="height:50px;width:200px;vertical-align: center">
                             <span class="glyphicon glyphicon-plus"></span>Tartes Salées</a>
-                        <a href="#" id="bio" class="btn btn-default btn-sm">
+                        <a href="#" id="bio" class="btn btn-default btn-sm" style="height:50px;width:200px;vertical-align: center">
                             <span class="glyphicon glyphicon-plus">
                                 </span>Tartes Bio</a>
-                        <a href="#" id="autre" class="btn btn-default btn-sm">
+                        <a href="#" id="autre" class="btn btn-default btn-sm" style="height:50px;width:200px;vertical-align: center">
                             <span class="glyphicon glyphicon-plus">
                                 </span>Autre Produits</a>
                     </div>
@@ -269,8 +263,8 @@
 
                 @foreach($produits as $produit)
                     <div class="item  col-xs-4 col-lg-4" style=" background: white">
-                        <div class="thumbnail" style = " background : #171717">
-                            <h4 style="font-family: 'Prata',sans-serif;font-size: 30px;color: darkred;"> {{$produit->titre}}</h4>
+                        <div class="thumbnail" style = " background : #ffffff">
+                            <h4 style="font-family: 'Prata',sans-serif;font-size: 30px;color: darkred;"> {{$produit->title}}</h4>
                             <img class="group list-group-image" src="{{asset($produit->link_img)}}" alt="image tarte" style="box-shadow:8px 8px 12px black;max-height:250px;max-width:250px;" />
                             <div class="caption">
                             <!------<p class="group inner list-group-item-text">

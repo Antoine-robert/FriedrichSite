@@ -14,18 +14,20 @@
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link rel="icon" type="image/jpg" href="{{asset('/img/Flogo.jpg')}}">
 
         <!-- Styles -->
         <style>
             html, body {
-                background: url("http://127.0.0.1:8000/img/bois2.jpg");
-                background-repeat: no-repeat;
+                background: url("http://127.0.0.1:8000/img/Bois3.jpg")no-repeat center fixed;
+                margin:0;
+                padding:0;
+                -webkit-background-size: cover;
                 background-size: cover;
                 color: #7f0000;
                 font-family: 'Prata', serif;
                 font-weight: 100;
                 height: 100vh;
-                margin: 0;
             }
 
             .full-height {
@@ -64,7 +66,7 @@
                            }
 
             .title {
-                color: #4e0000;
+                color: #ffffff;
                 margin-top:8%;
                 font-size: 84px;
                 text-shadow: white 1px 0 10px;
@@ -276,8 +278,13 @@
                     <a href="/contact">Nous contacter</a>
                     <a href="/entreprise">Notre entreprise</a>
                 </div>
+                <img src="img/savourezlalsace.gif" style="background:white;border-bottom-left-radius: 10%;border-bottom-right-radius : 10%;margin-top: 140px;margin-left: 80%">
             </div>
         </div>
+        <div class="flex-center position-ref full-height" style ="background: url('img/bois.jpg'); border :5px solid #000000">
+        <iframe id="player" type="text/html" width="1200" height="600" style="box-shadow:8px 8px 12px black"
+                           src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+                           frameborder="0"></iframe></div>
     </body>
     <footer>
         <div class="container">

@@ -64,17 +64,18 @@
                         <div style="cursor:default;">Adresse mail</div>
                         <input type="text" name="adresse2" placeholder="Entrez votre Adresse mail" />
                     </div>
-                    <div class="ws_conteneur_champs_invisible" style="margin-bottom: 2%;margin-top: 2%;height: 250px;width: 800px;">
-                        <textarea type="text" name="adresse2" placeholder="Rédigez Ici votre Message" style="height: 200px;width: 700px;margin-top:2%"></textarea>
+                    <div class="ws_conteneur_champs_invisible" style="margin-bottom: 2%;margin-top: 2%;height: 250px;width: 100%;">
+                        <textarea type="text" name="adresse2" placeholder="Rédigez Ici votre Message" style="width:100%;height:100%;"></textarea>
                     </div>
                     <input type="checkbox"><p style="font-size:20px;color: white;display: inline;max-width: 1000px;">En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées dans le cadre de votre demande de contact ansi que dans la relation commerciale qui peut en découler</p>
+                </br>
+                    <button type="submit"  class="button" style="vertical-align:middle;margin-bottom: 5px"><span>Envoyer</span></button>
                 </div>
-                <button type="submit"  class="button" style="vertical-align:middle;margin-bottom: 5px"><span>Envoyer</span></button>
-
+            </div>
             </div>
         </div>
     </div>
-    </div>
+
 @endsection
 @section('scripts')
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>

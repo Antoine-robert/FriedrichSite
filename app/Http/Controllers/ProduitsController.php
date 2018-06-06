@@ -42,20 +42,15 @@ class ProduitsController extends Controller
     public function store(Request $request)
     {
         Tartes::create([
-            'titre' => $request->prodname,
+            'title' => $request->prodname,
             'bio' => $request->isbio,
             'sale_sucre' => $request->taste,
-            'Conseil_de_prep' => $request->prepadvises,
+            'color' => $request->color,
             'link_img' => $request->imgpath,
             'description' => $request->proddescription,
             'tarteornot' => $request->tarteornot
         ]);
         return redirect('/produits')->with('status', 'Nouveau produit ajouté avec succès !');
-    }
-    public function indexData()
-    {
-        $products = ProductBDE::all()->toJson();
-        echo $products;
     }
 
     /**
@@ -66,8 +61,8 @@ class ProduitsController extends Controller
      */
     public function show($id)
     {
-        $produit = Tartes::find($id);
-        return view('products.show', compact('produit'));
+        $produits = Tartes::find($id);
+        return view('products.show', compact('produits'));
     }
 
     /**
@@ -79,9 +74,9 @@ class ProduitsController extends Controller
     public function edit($id)
     {
         if (Auth::check()) {
-        $product = ProductBDE::find($id);
+        $produits = Tartes::find($id);
 
-        return view('products.edit', compact('product'));
+        return view('products.edit', compact('produits'));
     }else {
         return redirect('/welcome')->with('status', 'Accès refusé');
         }
@@ -96,7 +91,12 @@ class ProduitsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Tartes::find($id)->update([
+            'title' => $request->tireprod,
+            'img_link' => $request->imgprod,
+            'description' => $request->prod,
+            'price' => $request->productPrice
+        ]);
     }
 
     /**

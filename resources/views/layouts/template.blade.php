@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Prata" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}"/>
+    <link rel="icon" type="image/jpg" href="{{asset('/img/Flogo.jpg')}}">
     @yield('custom_css')
 </head>
 <body>
@@ -23,11 +24,11 @@
 @yield('scripts')
 </body>
 <footer>
-    <div class="container">
+    <div class="container" style="margin-top: 50px">
         <div class="row">
-            <div class="col-md-4 col-sm-6 footerleft ">
+            <div class="col-md-4 col-sm-6 footerleft " style="padding-right: 0px">
                 <h6 class="heading7">A propos</h6>
-                <p> Description de l'entreprise rapide </p>
+                <p> Friedrich Surgelé est une entreprise familliale qui fabrique des tartes flambées surgelées depuis plus de 25 ans dans le plus grand respect des traditions alsasciennes </p>
                 <p> Nom de rue,Ville, Région Pays Code Postale </p>
                 <p><i class="fa fa-phone"></i> Téléphone :
                     <span itemprop="telephone"> +33 636982500</span></p>

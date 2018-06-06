@@ -15,9 +15,17 @@ Route::resources([
 ]);
 
 Route::get('/create','Produitscontroller@create');
-Route::get('/edit', 'Produitscontroller@edit');
-Route::get('/admin', function () {
+Route::get('/edit', function () {
+    $produits = \App\Tartes::all();
+    return view('products.edit',compact('produits'));
+});
+Route::get('/edit/{id}','Produitscontroller@edit');
 
+Route::get('/admin', function () {
+    if (Auth::check()) {
+        return view('home');
+    }
+    else
     return view('auth.login');
 });
 
